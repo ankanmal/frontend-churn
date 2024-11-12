@@ -11,20 +11,27 @@ export const Document = () => {
       event.preventDefault()
       setItems([...items,text])
       setText("")
-      console.log(items)
     }
   }
 
-  return(
-    <div>
-      <textarea name="user text" id="user_text" placeholder='Enter Your Text here...' onChange={handleChange} onKeyDown={handleEnter} value={text}></textarea>
-      <h2>Document</h2>
-      <div>
 
-          {items.map((value,index)=>{
+
+  return(
+    <div style={{width:"50rem"}}>
+      <div className='text-container'>
+      <textarea name="user text" id="user_text" placeholder='Enter Your Text here...' onChange={handleChange} onKeyDown={handleEnter} value={text} rows={8}></textarea>
+      </div>
+
+      <div className='document-container'>
+      <h2>Document</h2>
+      <div className='document-body'>
+
+           {items.map((value,index)=>{
             return <p key={index} className={ items.length - 1 === index ? 'last-item' : '' }>{value}</p>
           })}
 
+
+      </div>
       </div>
 
 
