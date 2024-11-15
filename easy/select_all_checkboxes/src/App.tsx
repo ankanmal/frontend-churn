@@ -10,8 +10,9 @@ interface List {
 
 const App = () => {
   const [items, setItems]= useState<List[]>(list)
-  const handleSelectAll = () =>{
-    console.log("handle selecr all")
+  const handleSelectAll = (checkedValue : Boolean) =>{
+    let selectAll = items.map((value)=> ({...value, checked:checkedValue}))
+    setItems(selectAll)
   }
   const handleCheckBox = (element: List,checkedValue: Boolean) =>{
     let temp = items.map((el)=>
@@ -24,8 +25,10 @@ const App = () => {
     <div>
     <Checkbox
       label="Select All"
-      checked= { true}
-      onChange={handleSelectAll}
+      checked= { items.filter((el) => el?.checked !== true).length < 1 ? true
+        : false
+      }
+      onChange={(checked: Boolean) =>handleSelectAll(checked)}
      />
      <form>
       {items.map((value)=>{
