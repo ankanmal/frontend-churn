@@ -1,0 +1,45 @@
+.main-container {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  border-style: solid;
+  border-width: 2px;
+  width: 24vw;
+  height: 44vh;
+  margin: 22px;
+}
+.items {
+  border: solid 2px;
+  margin: 15px;
+  display: block;
+  border-radius: 12px;
+}
+
+.spans {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  border-radius: 12px;
+
+
+}
+.spans:hover{
+  background-color: grey;
+}
+.spans.active{
+  background-color: black;
+  color: white;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  margin: 10px;
+
+}
