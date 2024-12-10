@@ -1,0 +1,92 @@
+.gallary {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Keeps items wrapping to the next row when space runs out */
+  gap: 16px; /* Adds consistent spacing between items */
+  justify-content: center; /* Centers the gallery items horizontally */
+  padding: 20px; /* Adds padding around the entire gallery */
+  background-color: #f9f9f9; /* Light background to make images stand out */
+
+}
+
+.gallary-box {
+  width: 200px; /* Fixed width for consistency */
+  height: 200px; /* Fixed height for consistency */
+  border: 2px solid #ddd; /* Adds a border for better definition */
+  border-radius: 8px; /* Slight rounding for a polished look */
+  overflow: hidden; /* Clips content inside the border radius */
+  background-color: black; /* White background for a clean look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation on hover */
+}
+
+.gallary-box:hover {
+  transform: scale(1.05); /* Slight zoom on hover for interactivity */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.gallary-images {
+  width: 100%; /* Ensures the image fits the container's width */
+  height: 100%; /* Ensures the image fits the container's height */
+  object-fit: cover; /* Maintains aspect ratio and fills the container */
+  display: block; /* Removes any inline spacing issues */
+}
+
+
+
+.overlay {
+  position: fixed;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Start as fully transparent */
+  transform: scale(0.95); /* Slightly scaled down */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.overlay.active {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Full size */
+  pointer-events: auto; /* Allow interaction */
+}
+.modal-content {
+  max-width: 80%; /* Keep the main image large */
+  max-height: 80%;
+  margin-bottom: 16px; /* Space between main image and thumbnails */
+  border-radius: 8px;
+}
+
+.overlay-images {
+  display: flex;
+  justify-content: center;
+  gap: 0; /* No gap between the thumbnails */
+  width: 100%; /* Ensure thumbnails container spans full width */
+}
+
+.overlay-mini-images {
+  width: 5%; /* Thumbnails take up 5% of the container width */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  margin: 0; /* Remove any default margin */
+  object-fit: cover; /* Ensure images fit nicely without distortion */
+  border: 2px solid transparent; /* Add space for hover effect */
+  transition: border-color 0.3s ease;
+}
+
+.overlay-mini-images:hover {
+  border-color: white; /* Highlight thumbnail on hover */
+}
+
+
