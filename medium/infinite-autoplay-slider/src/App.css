@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  background-color: #f0f2f5;
+  overflow: hidden;
+
+
+}
+a{
+  text-decoration: none;
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.row > *{
+  display: flex;
+}
+
+
+
+
+
+
+/* CSS for Card */
+
+a {
+  text-decoration: none;
+}
+.card {
+  box-shadow: 10px 10px 0px 0px #00000050;
+  background-color: #fff;
+  min-width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 28px;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  background-color: #f1f5f9;
+  cursor: pointer;
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  color: #141414;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-bottom p {
+  color: black;
+}
+.card img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #0ea5e9;
+}
